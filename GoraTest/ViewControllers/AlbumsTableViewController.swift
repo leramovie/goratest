@@ -33,8 +33,8 @@ class AlbumsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath) as! AlbumsTableViewCell
         switch state2 {
-        case .loaded(let nameArr):
-            cell.albumIdLabel?.text =  nameArr[indexPath.row].albumId
+        case .loaded(let albumArr):
+            cell.albumIdLabel?.text = albumArr[indexPath.row].albumId
         case .loading:
             sleep(1)
         }         
