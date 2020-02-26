@@ -83,7 +83,7 @@ func requestPhotos(albumId: Int, completion: @escaping ([(url: String, label: St
     let session = URLSession.shared
     session.dataTask(with: downloadURL) { data, response, error in
         guard let data = data else {
-            completion([("", "")])
+            completion(nil)
             return
         }
         do{
@@ -101,7 +101,7 @@ func requestPhotos(albumId: Int, completion: @escaping ([(url: String, label: St
             }
         } catch {
             print("JSONSerialization error:", error)
-            completion([("", "")])
+            completion(nil)
             
         }
         

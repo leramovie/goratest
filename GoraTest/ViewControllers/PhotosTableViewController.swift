@@ -39,7 +39,7 @@ class PhotosTableViewController: UITableViewController {
          case .loaded(let albumArr):
              cell.titleOfPhotoLabel?.text = albumArr[indexPath.row].label
              let albumArrUrlImage = albumArr[indexPath.row].url
-             cell.photoImageView?.set(imageURL: albumArrUrlImage)
+             //cell.photoImageView?.set(imageURL: albumArrUrlImage)
          case .loading:
              sleep(1)
          }
