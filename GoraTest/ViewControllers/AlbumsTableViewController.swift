@@ -8,6 +8,8 @@ enum State2 {
 
 class AlbumsTableViewController: UITableViewController {
 
+    //var arrArr = ["1", "2", "3", "4", "5", "6", "7"]
+    
     private var state2 = State2.loading
 
     var userId: Int!
@@ -18,7 +20,7 @@ class AlbumsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         requestAlbums(userId: userId, completion: {[weak self] data in
-            self?.state = .loaded(data!)
+            self?.state2 = .loaded(data!)
             print(albumArr)
             self?.tableView.reloadData()
         })
@@ -26,7 +28,13 @@ class AlbumsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        switch state2 {
+        case .loading:
+            sleep(1)
+        case .loaded(let data):
+            return albumArr.count
+        }
+        return albumArr.count
     }
     
     
@@ -34,7 +42,8 @@ class AlbumsTableViewController: UITableViewController {
          let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath) as! AlbumsTableViewCell
         switch state2 {
         case .loaded(let albumArr):
-            cell.albumIdLabel?.text = albumArr[indexPath.row].albumId
+            var indexAlbumNumber = albumArr[indexPath.row].albumId
+            cell.albumIdLabel?.text = String(indexAlbumNumber)
         case .loading:
             sleep(1)
         }         
