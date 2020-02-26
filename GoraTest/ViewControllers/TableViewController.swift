@@ -48,7 +48,8 @@ class TableViewController: UITableViewController {
         if let indexPath = self.tableView.indexPathForSelectedRow{
             let selectedRow = indexPath.row
             let dvc = segue.destination as! AlbumsTableViewController
-      //      dvc.id = self.nameArr[indexPath.row].userId
+            dvc.userId = nameArr[selectedRow].id
+
         }
     }
 }

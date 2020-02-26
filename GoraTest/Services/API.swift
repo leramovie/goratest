@@ -2,6 +2,7 @@ import Foundation
 
 var userData = [UsersData]()
 var nameArr = [(id: Int, name: String)]()
+var albumArr = [(userId: Int, albumId: Int)]()
 
 func requestName(completion: @escaping ([(id: Int, name: String)]?) -> Void){
        
@@ -32,6 +33,43 @@ func requestName(completion: @escaping ([(id: Int, name: String)]?) -> Void){
                        }
                    }.resume()
                }
+
+
+
+
+
+
+func requestAlbums(userId:Int, completion: @escaping ([(userId: Int, albumId: Int)]?) -> Void) {
+
+    let url = URL(string: "https://jsonplaceholder.typicode.com/users/\(userId)/albums")
+
+    guard let downloadURL = url else {return}
+
+    let session = URLSession.shared
+    session.dataTask(with: downloadURL) { data, response, error in
+        guard let data = data else {return}
+
+        do{
+            var ids = [Int]()
+            let requestAlbums = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [[String:Any]]
+            for item in requestAlbums {
+                let userId = item["userId"] as? Int
+                let albumId = item["id"] as? Int
+                if userId == userId {
+                    albumArr.append((userId: userId!, albumId: albumId!))
+                    
+                }
+                
+            }
+        } catch {
+            print("JSONSerialization error:", error)
+        }
+    }.resume()
+}
+
+
+
+
 
 //
 //

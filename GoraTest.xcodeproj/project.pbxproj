@@ -88,10 +88,10 @@
 		F99F219424013936002496F0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F99F21A82405125A002496F0 /* Cell */,
 				F99F2190240135FE002496F0 /* TableViewController.swift */,
-				F99F218024012223002496F0 /* PhotosViewController.swift */,
 				F99F21B624057BB7002496F0 /* AlbumsTableViewController.swift */,
+				F99F218024012223002496F0 /* PhotosViewController.swift */,
+				F99F21A82405125A002496F0 /* Cell */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -136,8 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				F99F21AF2405257D002496F0 /* UserTableViewCell.swift */,
-				F99F21AB24051301002496F0 /* PhotoTableViewCell.swift */,
 				F99F21B824057BCE002496F0 /* AlbumsTableViewCell.swift */,
+				F99F21AB24051301002496F0 /* PhotoTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
