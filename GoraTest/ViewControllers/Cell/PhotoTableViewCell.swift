@@ -7,7 +7,7 @@ class PhotoTableViewCell: UITableViewCell {
     var imageURL: String!
     
     
-    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var photoImageView: WebImageView!
     @IBOutlet weak var titleOfPhotoLabel: UILabel!
     
     override func awakeFromNib() {
@@ -19,7 +19,7 @@ class PhotoTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-        let myCell = UIView()
+        let myCell = UITableViewCell()
 
         myCell.layer.cornerRadius = 10
         myCell.layer.masksToBounds = true

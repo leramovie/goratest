@@ -3,6 +3,7 @@ import Foundation
 var userData = [UsersData]()
 var nameArr = [(id: Int, name: String)]()
 var albumArr = [(userId: Int, albumId: Int)]()
+var photosArr = [(albumId: Int, url: String, label: String)]()
 
 func requestName(completion: @escaping ([(id: Int, name: String)]?) -> Void){
        
@@ -34,11 +35,6 @@ func requestName(completion: @escaping ([(id: Int, name: String)]?) -> Void){
                    }.resume()
                }
 
-
-
-
-
-
 func requestAlbums(userId:Int, completion: @escaping ([(userId: Int, albumId: Int)]?) -> Void) {
 
     let url = URL(string: "https://jsonplaceholder.typicode.com/users/\(userId)/albums")
@@ -47,7 +43,11 @@ func requestAlbums(userId:Int, completion: @escaping ([(userId: Int, albumId: In
 
     let session = URLSession.shared
     session.dataTask(with: downloadURL) { data, response, error in
-        guard let data = data else {return}
+        guard let data = data else {
+            completion(nil)
+            return
+            
+        }
 
         do{
             var ids = [Int]()
@@ -59,14 +59,55 @@ func requestAlbums(userId:Int, completion: @escaping ([(userId: Int, albumId: In
                     albumArr.append((userId: userId!, albumId: albumId!))
                     
                 }
-                
+                completion(albumArr)
             }
         } catch {
             print("JSONSerialization error:", error)
+            completion(nil)
+
         }
     }.resume()
 }
 
+
+func requestPhotos(albumId: Int, completion: @escaping ([(url: String, label: String)]?) -> Void) {
+
+    let url = URL(string: "https://jsonplaceholder.typicode.com/album/\(albumId)/photos")
+
+    guard let downloadURL = url else {
+        
+        completion([("", "")])
+        return
+    }
+
+    let session = URLSession.shared
+    session.dataTask(with: downloadURL) { data, response, error in
+        guard let data = data else {
+            completion([("", "")])
+            return
+        }
+        do{
+            var photosArr = [(url: String, label: String)]()
+            let requestPhotos = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [[String:Any]]
+                for item in requestPhotos {
+                    let photoLabel = item["title"] as? String
+                    let photoUrl = item["url"] as? String
+                    let id = item["albumId"] as? Int
+                    if albumId == id {
+                        photosArr.append((url: photoUrl!, label: photoLabel!))
+                        
+                    }
+                    completion(photosArr)
+            }
+        } catch {
+            print("JSONSerialization error:", error)
+            completion([("", "")])
+            
+        }
+        
+    }.resume()
+    
+}
 
 
 

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F99F217D24012223002496F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F217C24012223002496F0 /* AppDelegate.swift */; };
 		F99F217F24012223002496F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F217E24012223002496F0 /* SceneDelegate.swift */; };
-		F99F218124012223002496F0 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F218024012223002496F0 /* PhotosViewController.swift */; };
+		F99F218124012223002496F0 /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F218024012223002496F0 /* PhotosTableViewController.swift */; };
 		F99F21862401222E002496F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F99F21852401222E002496F0 /* Assets.xcassets */; };
 		F99F21892401222E002496F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99F21872401222E002496F0 /* LaunchScreen.storyboard */; };
 		F99F2191240135FE002496F0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F2190240135FE002496F0 /* TableViewController.swift */; };
@@ -28,7 +28,7 @@
 		F99F217924012223002496F0 /* GoraTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoraTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F99F217C24012223002496F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F99F217E24012223002496F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F99F218024012223002496F0 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		F99F218024012223002496F0 /* PhotosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewController.swift; sourceTree = "<group>"; };
 		F99F21852401222E002496F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F99F21882401222E002496F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F99F218A2401222E002496F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 			children = (
 				F99F2190240135FE002496F0 /* TableViewController.swift */,
 				F99F21B624057BB7002496F0 /* AlbumsTableViewController.swift */,
-				F99F218024012223002496F0 /* PhotosViewController.swift */,
+				F99F218024012223002496F0 /* PhotosTableViewController.swift */,
 				F99F21A82405125A002496F0 /* Cell */,
 			);
 			path = ViewControllers;
@@ -214,7 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F99F21AC24051301002496F0 /* PhotoTableViewCell.swift in Sources */,
-				F99F218124012223002496F0 /* PhotosViewController.swift in Sources */,
+				F99F218124012223002496F0 /* PhotosTableViewController.swift in Sources */,
 				F99F21B724057BB7002496F0 /* AlbumsTableViewController.swift in Sources */,
 				F99F217D24012223002496F0 /* AppDelegate.swift in Sources */,
 				F99F217F24012223002496F0 /* SceneDelegate.swift in Sources */,

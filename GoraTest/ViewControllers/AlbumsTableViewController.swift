@@ -8,7 +8,6 @@ enum State2 {
 
 class AlbumsTableViewController: UITableViewController {
 
-    //var arrArr = ["1", "2", "3", "4", "5", "6", "7"]
     
     private var state2 = State2.loading
 
@@ -49,7 +48,14 @@ class AlbumsTableViewController: UITableViewController {
         }         
          return cell
      }
-    
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if let indexPath = self.tableView.indexPathForSelectedRow{
+            let selectedRow = indexPath.row
+            let pvc = segue.destination as! PhotosTableViewController
+            pvc.albumId = albumArr[selectedRow].albumId
+        }
+    }
             
         
     }
