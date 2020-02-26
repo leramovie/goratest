@@ -16,10 +16,13 @@ class PhotosTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        requestPhotos(albumId: albumId, completion: {[weak self] data in
-            self?.state3 = .loaded(data!)
+        requestPhotos(albumId: albumId, completion: {[unowned self] data in
+            self.state3 = .loaded(data!)
             print(photosArr)
-            self?.tableView.reloadData()
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         })
     }
     

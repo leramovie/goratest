@@ -18,10 +18,12 @@ class AlbumsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        requestAlbums(userId: userId, completion: {[weak self] data in
-            self?.state2 = .loaded(data!)
+        requestAlbums(userId: userId, completion: {[unowned self] data in
+            self.state2 = .loaded(data!)
             print(albumArr)
-            self?.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         })
         
     }

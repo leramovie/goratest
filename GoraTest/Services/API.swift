@@ -25,7 +25,7 @@ func requestName(completion: @escaping ([(id: Int, name: String)]?) -> Void){
                             let name = item["name"] as? String
                             let id = item["id"] as? Int
                             nameArr.append((id: id!, name: name!))
-                            
+        
                         }
                        completion(nameArr)
                        } catch{
@@ -74,11 +74,7 @@ func requestPhotos(albumId: Int, completion: @escaping ([(url: String, label: St
 
     let url = URL(string: "https://jsonplaceholder.typicode.com/album/\(albumId)/photos")
 
-    guard let downloadURL = url else {
-        
-        completion([("", "")])
-        return
-    }
+    guard let downloadURL = url else {return}
 
     let session = URLSession.shared
     session.dataTask(with: downloadURL) { data, response, error in
@@ -86,6 +82,7 @@ func requestPhotos(albumId: Int, completion: @escaping ([(url: String, label: St
             completion(nil)
             return
         }
+        
         do{
             var photosArr = [(url: String, label: String)]()
             let requestPhotos = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [[String:Any]]

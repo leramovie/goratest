@@ -13,10 +13,12 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        requestName(completion: {[weak self] data in
-            self?.state = .loaded(data!)
+        requestName(completion: {[unowned self] data in
+            self.state = .loaded(data!)
             print(nameArr)
-            self?.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         })
         
     }
