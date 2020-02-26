@@ -10,13 +10,18 @@
 		F99F217D24012223002496F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F217C24012223002496F0 /* AppDelegate.swift */; };
 		F99F217F24012223002496F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F217E24012223002496F0 /* SceneDelegate.swift */; };
 		F99F218124012223002496F0 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F218024012223002496F0 /* PhotosViewController.swift */; };
-		F99F218424012224002496F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99F218224012224002496F0 /* Main.storyboard */; };
 		F99F21862401222E002496F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F99F21852401222E002496F0 /* Assets.xcassets */; };
 		F99F21892401222E002496F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99F21872401222E002496F0 /* LaunchScreen.storyboard */; };
 		F99F2191240135FE002496F0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F2190240135FE002496F0 /* TableViewController.swift */; };
-		F99F219324013928002496F0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F219224013927002496F0 /* TableViewCell.swift */; };
 		F99F21962401416A002496F0 /* UsersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F21952401416A002496F0 /* UsersData.swift */; };
 		F99F219D24014AF9002496F0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F219C24014AF9002496F0 /* API.swift */; };
+		F99F21A02404287C002496F0 /* UserNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F219F2404287B002496F0 /* UserNames.swift */; };
+		F99F21AA24051288002496F0 /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F21A924051288002496F0 /* WebImageView.swift */; };
+		F99F21AC24051301002496F0 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F21AB24051301002496F0 /* PhotoTableViewCell.swift */; };
+		F99F21B02405257D002496F0 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F21AF2405257D002496F0 /* UserTableViewCell.swift */; };
+		F99F21B224052645002496F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99F21B124052645002496F0 /* Main.storyboard */; };
+		F99F21B724057BB7002496F0 /* AlbumsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F21B624057BB7002496F0 /* AlbumsTableViewController.swift */; };
+		F99F21B924057BCE002496F0 /* AlbumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F21B824057BCE002496F0 /* AlbumsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,14 +29,19 @@
 		F99F217C24012223002496F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F99F217E24012223002496F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F99F218024012223002496F0 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
-		F99F218324012224002496F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F99F21852401222E002496F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F99F21882401222E002496F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F99F218A2401222E002496F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F99F2190240135FE002496F0 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		F99F219224013927002496F0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F99F21952401416A002496F0 /* UsersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersData.swift; sourceTree = "<group>"; };
 		F99F219C24014AF9002496F0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		F99F219F2404287B002496F0 /* UserNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNames.swift; sourceTree = "<group>"; };
+		F99F21A924051288002496F0 /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
+		F99F21AB24051301002496F0 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		F99F21AF2405257D002496F0 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		F99F21B124052645002496F0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F99F21B624057BB7002496F0 /* AlbumsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewController.swift; sourceTree = "<group>"; };
+		F99F21B824057BCE002496F0 /* AlbumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +74,8 @@
 		F99F217B24012223002496F0 /* GoraTest */ = {
 			isa = PBXGroup;
 			children = (
-				F99F219E24014AFE002496F0 /* API */,
-				F99F219724014175002496F0 /* TemplateData */,
+				F99F21A1240433DF002496F0 /* Services */,
+				F99F21A5240436E2002496F0 /* Helpers */,
 				F99F219424013936002496F0 /* ViewControllers */,
 				F99F219824014189002496F0 /* View */,
 				F99F2199240141AA002496F0 /* Delegate */,
@@ -78,25 +88,18 @@
 		F99F219424013936002496F0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F99F21A82405125A002496F0 /* Cell */,
 				F99F2190240135FE002496F0 /* TableViewController.swift */,
-				F99F219224013927002496F0 /* TableViewCell.swift */,
 				F99F218024012223002496F0 /* PhotosViewController.swift */,
+				F99F21B624057BB7002496F0 /* AlbumsTableViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		F99F219724014175002496F0 /* TemplateData */ = {
-			isa = PBXGroup;
-			children = (
-				F99F21952401416A002496F0 /* UsersData.swift */,
-			);
-			path = TemplateData;
 			sourceTree = "<group>";
 		};
 		F99F219824014189002496F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F99F218224012224002496F0 /* Main.storyboard */,
+				F99F21B124052645002496F0 /* Main.storyboard */,
 				F99F21872401222E002496F0 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -111,12 +114,32 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
-		F99F219E24014AFE002496F0 /* API */ = {
+		F99F21A1240433DF002496F0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				F99F219C24014AF9002496F0 /* API.swift */,
+				F99F21952401416A002496F0 /* UsersData.swift */,
+				F99F219F2404287B002496F0 /* UserNames.swift */,
 			);
-			path = API;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F99F21A5240436E2002496F0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F99F21A924051288002496F0 /* WebImageView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F99F21A82405125A002496F0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F99F21AF2405257D002496F0 /* UserTableViewCell.swift */,
+				F99F21AB24051301002496F0 /* PhotoTableViewCell.swift */,
+				F99F21B824057BCE002496F0 /* AlbumsTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +200,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F99F21B224052645002496F0 /* Main.storyboard in Resources */,
 				F99F21892401222E002496F0 /* LaunchScreen.storyboard in Resources */,
 				F99F21862401222E002496F0 /* Assets.xcassets in Resources */,
-				F99F218424012224002496F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,27 +213,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F99F219324013928002496F0 /* TableViewCell.swift in Sources */,
+				F99F21AC24051301002496F0 /* PhotoTableViewCell.swift in Sources */,
 				F99F218124012223002496F0 /* PhotosViewController.swift in Sources */,
+				F99F21B724057BB7002496F0 /* AlbumsTableViewController.swift in Sources */,
 				F99F217D24012223002496F0 /* AppDelegate.swift in Sources */,
 				F99F217F24012223002496F0 /* SceneDelegate.swift in Sources */,
+				F99F21B02405257D002496F0 /* UserTableViewCell.swift in Sources */,
 				F99F21962401416A002496F0 /* UsersData.swift in Sources */,
+				F99F21A02404287C002496F0 /* UserNames.swift in Sources */,
 				F99F2191240135FE002496F0 /* TableViewController.swift in Sources */,
+				F99F21AA24051288002496F0 /* WebImageView.swift in Sources */,
 				F99F219D24014AF9002496F0 /* API.swift in Sources */,
+				F99F21B924057BCE002496F0 /* AlbumsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F99F218224012224002496F0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F99F218324012224002496F0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F99F21872401222E002496F0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
