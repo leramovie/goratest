@@ -99,7 +99,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQ4-Qh-4yE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2971" y="113"/>
+            <point key="canvasLocation" x="2969.5652173913045" y="112.5"/>
         </scene>
         <!--Photos-->
         <scene sceneID="3Qm-Ni-2un">
@@ -110,35 +110,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PhotoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="527" id="y2M-3c-e5L" customClass="PhotoTableViewCell" customModule="GoraTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="527"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PhotoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="480" id="y2M-3c-e5L" customClass="PhotoTableViewCell" customModule="GoraTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="480"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y2M-3c-e5L" id="u0T-in-bgV">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="527"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="480"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="imageUrl" translatesAutoresizingMaskIntoConstraints="NO" id="uZp-iA-VyZ" customClass="WebImageView" customModule="GoraTest" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imageUrl" translatesAutoresizingMaskIntoConstraints="NO" id="uZp-iA-VyZ" customClass="WebImageView" customModule="GoraTest" customModuleProvider="target">
+                                            <rect key="frame" x="25" y="18" width="364" height="378"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="378" id="NDt-Xj-9u7"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="photoTitleLabel" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M83-Be-Fey">
-                                            <rect key="frame" x="20" y="442" width="374" height="74"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fk0-iC-7vU">
+                                            <rect key="frame" x="157" y="174" width="104" height="83"/>
+                                        </activityIndicatorView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="photoTitleLabel" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M83-Be-Fey">
+                                            <rect key="frame" x="25" y="404" width="364" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="2uC-3i-b5x">
-                                            <rect key="frame" x="197" y="253.5" width="20" height="20"/>
-                                        </activityIndicatorView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="uZp-iA-VyZ" firstAttribute="trailing" secondItem="M83-Be-Fey" secondAttribute="trailing" id="57L-fz-u89"/>
+                                        <constraint firstItem="uZp-iA-VyZ" firstAttribute="top" secondItem="u0T-in-bgV" secondAttribute="topMargin" constant="7" id="96M-Hn-Gt2"/>
+                                        <constraint firstItem="uZp-iA-VyZ" firstAttribute="leading" secondItem="u0T-in-bgV" secondAttribute="leadingMargin" constant="5" id="V9e-Gh-Src"/>
+                                        <constraint firstItem="uZp-iA-VyZ" firstAttribute="centerX" secondItem="u0T-in-bgV" secondAttribute="centerX" id="XGe-UN-OYz"/>
+                                        <constraint firstItem="uZp-iA-VyZ" firstAttribute="leading" secondItem="M83-Be-Fey" secondAttribute="leading" id="ZVs-mU-4Vo"/>
+                                        <constraint firstItem="M83-Be-Fey" firstAttribute="top" secondItem="uZp-iA-VyZ" secondAttribute="bottom" constant="8" id="kMa-P5-Fqh"/>
+                                        <constraint firstItem="uZp-iA-VyZ" firstAttribute="centerY" secondItem="fk0-iC-7vU" secondAttribute="centerY" id="mTX-xj-4fc"/>
+                                        <constraint firstItem="uZp-iA-VyZ" firstAttribute="centerX" secondItem="fk0-iC-7vU" secondAttribute="centerX" id="tXB-s2-DX6"/>
+                                    </constraints>
                                 </tableViewCellContentView>
-                                <constraints>
-                                    <constraint firstItem="2uC-3i-b5x" firstAttribute="centerX" secondItem="y2M-3c-e5L" secondAttribute="centerX" id="LFe-GL-Bjh"/>
-                                    <constraint firstItem="2uC-3i-b5x" firstAttribute="centerY" secondItem="y2M-3c-e5L" secondAttribute="centerY" id="TcM-L2-yNl"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="photoImageView" destination="uZp-iA-VyZ" id="EaT-lM-ii9"/>
+                                    <outlet property="photoLoadingIndicator" destination="fk0-iC-7vU" id="5rv-mF-fj1"/>
                                     <outlet property="titleOfPhotoLabel" destination="M83-Be-Fey" id="b27-KM-bfO"/>
                                 </connections>
                             </tableViewCell>
@@ -152,7 +160,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQw-t5-44d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3943" y="113"/>
+            <point key="canvasLocation" x="3942.0289855072465" y="112.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sje-qc-TrH">

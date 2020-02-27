@@ -3,7 +3,7 @@ import Foundation
 var userData = [UsersData]()
 var nameArr = [(id: Int, name: String)]()
 var albumArr = [(userId: Int, albumId: Int)]()
-var photosArr = [(albumId: Int, url: String, label: String)]()
+var photosArr = [(photoUrl: String, photoLabel: String, photoId: Int)]()
 
 func requestName(completion: @escaping ([(id: Int, name: String)]?) -> Void){
        
@@ -50,7 +50,6 @@ func requestAlbums(userId:Int, completion: @escaping ([(userId: Int, albumId: In
         }
 
         do{
-            var ids = [Int]()
             let requestAlbums = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [[String:Any]]
             for item in requestAlbums {
                 let userId = item["userId"] as? Int
@@ -70,11 +69,14 @@ func requestAlbums(userId:Int, completion: @escaping ([(userId: Int, albumId: In
 }
 
 
-func requestPhotos(albumId: Int, completion: @escaping ([(url: String, label: String)]?) -> Void) {
+func requestPhotos(albumId: Int, completion: @escaping ([(photoUrl: String, photoLabel: String, photoId: Int)]?) -> Void) {
 
-    let url = URL(string: "https://jsonplaceholder.typicode.com/album/\(albumId)/photos")
+    let url = URL(string: "https://jsonplaceholder.typicode.com/albums/\(albumId)/photos")
 
-    guard let downloadURL = url else {return}
+    guard let downloadURL = url else {
+        completion(nil)
+        return
+    }
 
     let session = URLSession.shared
     session.dataTask(with: downloadURL) { data, response, error in
@@ -84,18 +86,17 @@ func requestPhotos(albumId: Int, completion: @escaping ([(url: String, label: St
         }
         
         do{
-            var photosArr = [(url: String, label: String)]()
+            //var photosArr = [(photoUrl: String, photoLabel: String, photoId: Int)]()
             let requestPhotos = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [[String:Any]]
                 for item in requestPhotos {
                     let photoLabel = item["title"] as? String
                     let photoUrl = item["url"] as? String
-                    let id = item["albumId"] as? Int
-                    if albumId == id {
-                        photosArr.append((url: photoUrl!, label: photoLabel!))
+                    let photoId = item["id"] as? Int
+                    photosArr.append((photoUrl: photoUrl!, photoLabel: photoLabel!, photoId: photoId!))
                         
                     }
                     completion(photosArr)
-            }
+          
         } catch {
             print("JSONSerialization error:", error)
             completion(nil)

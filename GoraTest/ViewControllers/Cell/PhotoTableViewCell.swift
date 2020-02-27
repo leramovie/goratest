@@ -9,6 +9,8 @@ class PhotoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var photoImageView: WebImageView!
     @IBOutlet weak var titleOfPhotoLabel: UILabel!
+
+    @IBOutlet weak var photoLoadingIndicator: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,13 +21,7 @@ class PhotoTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-        let myCell = UITableViewCell()
 
-        myCell.layer.cornerRadius = 10
-        myCell.layer.masksToBounds = true
-        myCell.layer.shadowOpacity = 1
-        myCell.layer.shadowOffset = CGSize(width: 0, height: 5)
-        myCell.layer.shadowRadius = 10
     }
 
        

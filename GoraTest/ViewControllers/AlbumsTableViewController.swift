@@ -18,20 +18,20 @@ class AlbumsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        requestAlbums(userId: userId, completion: {[unowned self] data in
-            self.state2 = .loaded(data!)
+        requestAlbums(userId: userId, completion: {[weak self] data in
+            self?.state2 = .loaded(data!)
             print(albumArr)
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                self?.tableView.reloadData()
             }
         })
         
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        
         switch state2 {
         case .loading:
-            sleep(1)
+            return 0
         case .loaded(let data):
             return albumArr.count
         }

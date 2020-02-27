@@ -13,11 +13,11 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        requestName(completion: {[unowned self] data in
-            self.state = .loaded(data!)
+        requestName(completion: {[weak self] data in
+            self?.state = .loaded(data!)
             print(nameArr)
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                self?.tableView.reloadData()
             }
         })
         
@@ -37,6 +37,9 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserNameCell", for: indexPath) as! UserTableViewCell
+
+        
+        
         switch state {
         case .loaded(let nameArr):
             cell.usernameLabel?.text =  nameArr[indexPath.row].name
@@ -44,6 +47,7 @@ class TableViewController: UITableViewController {
             sleep(1)
         }
         return cell
+
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
@@ -54,6 +58,17 @@ class TableViewController: UITableViewController {
 
         }
     }
+    
+//    func toogleActivityIndicator(on: Bool){
+//        refreshButton.isHidden = on
+//        
+//        if on {
+//            
+//        } else {
+//            activityIndicator.stopAnimating()
+//
+//        }
+//    }
 }
 
 
