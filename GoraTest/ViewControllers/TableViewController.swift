@@ -23,6 +23,12 @@ class TableViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+        return 50
+    }
+    
+ 
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             switch state {
@@ -58,17 +64,6 @@ class TableViewController: UITableViewController {
 
         }
     }
-    
-//    func toogleActivityIndicator(on: Bool){
-//        refreshButton.isHidden = on
-//        
-//        if on {
-//            
-//        } else {
-//            activityIndicator.stopAnimating()
-//
-//        }
-//    }
 }
 
 

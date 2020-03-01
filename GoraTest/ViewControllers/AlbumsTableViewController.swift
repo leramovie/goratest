@@ -27,6 +27,11 @@ class AlbumsTableViewController: UITableViewController {
         })
         
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+           return 50
+       }
+       
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        
         switch state2 {
@@ -44,7 +49,7 @@ class AlbumsTableViewController: UITableViewController {
         switch state2 {
         case .loaded(let albumArr):
             var indexAlbumNumber = albumArr[indexPath.row].albumId
-            cell.albumIdLabel?.text = String(indexAlbumNumber)
+            cell.albumIdLabel?.text = String("Album № \(indexAlbumNumber)")
         case .loading:
             sleep(1)
         }         
@@ -54,13 +59,11 @@ class AlbumsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if let indexPath = self.tableView.indexPathForSelectedRow{
             let selectedRow = indexPath.row
-            let pvc = segue.destination as! PhotosTableViewController
+            let pvc = segue.destination as! PhotoCollectionViewController
             pvc.albumId = albumArr[selectedRow].albumId
         }
     }
-            
-        
-    }
+}
     
 
 

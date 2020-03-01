@@ -1,6 +1,5 @@
 import Foundation
 
-var userData = [UsersData]()
 var nameArr = [(id: Int, name: String)]()
 var albumArr = [(userId: Int, albumId: Int)]()
 var photosArr = [(photoUrl: String, photoLabel: String, photoId: Int)]()
@@ -86,7 +85,7 @@ func requestPhotos(albumId: Int, completion: @escaping ([(photoUrl: String, phot
         }
         
         do{
-            //var photosArr = [(photoUrl: String, photoLabel: String, photoId: Int)]()
+            
             let requestPhotos = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [[String:Any]]
                 for item in requestPhotos {
                     let photoLabel = item["title"] as? String
@@ -108,10 +107,7 @@ func requestPhotos(albumId: Int, completion: @escaping ([(photoUrl: String, phot
 }
 
 
-
-
-//
-//
+// Запасная функция для прямого получения из User to Photo (в обход альбома)
 //final class NetworkService{
 //
 //    func requestAll(completion: @escaping (_ name: String) -> Void){

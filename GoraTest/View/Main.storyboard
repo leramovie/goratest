@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,17 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserNameCell" id="eWy-cu-PKn" customClass="UserTableViewCell" customModule="GoraTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="31"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UserNameCell" id="eWy-cu-PKn" customClass="UserTableViewCell" customModule="GoraTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="31.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eWy-cu-PKn" id="4jz-eP-ehs">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="31"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="31.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="usernameLabel" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc9-Px-Nu4">
-                                            <rect key="frame" x="12" y="5" width="397" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="usernameLabel" text="User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nc9-Px-Nu4">
+                                            <rect key="frame" x="12" y="5" width="366" height="21.5"/>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -52,26 +54,26 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Xa-YY-DMe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2031.8840579710147" y="112.5"/>
+            <point key="canvasLocation" x="2319" y="113"/>
         </scene>
         <!--Albums-->
         <scene sceneID="KK7-E8-PhL">
             <objects>
                 <tableViewController id="Msw-bm-h1x" customClass="AlbumsTableViewController" customModule="GoraTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LHW-3e-gdn">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="13" sectionFooterHeight="28" id="LHW-3e-gdn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AlbumCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumCell" rowHeight="59" id="LbU-kt-DfA" customClass="AlbumsTableViewCell" customModule="GoraTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="59"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AlbumCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AlbumCell" rowHeight="69" id="LbU-kt-DfA" customClass="AlbumsTableViewCell" customModule="GoraTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LbU-kt-DfA" id="v1Q-QD-fF3">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="albumIdLabel" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxT-aC-wPy">
-                                            <rect key="frame" x="20" y="11" width="374" height="37"/>
+                                            <rect key="frame" x="20" y="11" width="355" height="47"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -84,9 +86,10 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="vxT-aC-wPy" secondAttribute="trailing" id="rCa-yo-ElW"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <connections>
                                     <outlet property="albumIdLabel" destination="vxT-aC-wPy" id="qCH-ZP-zKt"/>
-                                    <segue destination="OFJ-I0-8Sf" kind="show" id="q90-kn-Nxs"/>
+                                    <segue destination="ra2-0Q-n3z" kind="show" id="Pbt-iH-NWg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -101,66 +104,76 @@
             </objects>
             <point key="canvasLocation" x="2969.5652173913045" y="112.5"/>
         </scene>
-        <!--Photos-->
-        <scene sceneID="3Qm-Ni-2un">
+        <!--Photo-->
+        <scene sceneID="Y9R-sM-QHM">
             <objects>
-                <tableViewController id="OFJ-I0-8Sf" customClass="PhotosTableViewController" customModule="GoraTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IwA-4p-c47">
+                <collectionViewController id="ra2-0Q-n3z" customClass="PhotoCollectionViewController" customModule="GoraTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xx4-MS-Qp4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PhotoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="480" id="y2M-3c-e5L" customClass="PhotoTableViewCell" customModule="GoraTest" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="480"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y2M-3c-e5L" id="u0T-in-bgV">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="480"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nIL-Qx-U1n">
+                            <size key="itemSize" width="350" height="420"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="photoContainer" reuseIdentifier="photoCell" id="ggd-Vd-DJh" customClass="PhotoCollectionViewCell" customModule="GoraTest" customModuleProvider="target">
+                                <rect key="frame" x="32" y="20" width="350" height="420"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cgc-KB-R6D">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="420"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imageUrl" translatesAutoresizingMaskIntoConstraints="NO" id="uZp-iA-VyZ" customClass="WebImageView" customModule="GoraTest" customModuleProvider="target">
-                                            <rect key="frame" x="25" y="18" width="364" height="378"/>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="4u5-Q6-WJv">
+                                            <rect key="frame" x="165" y="200" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mq8-lT-Vcc" customClass="WebImageView" customModule="GoraTest" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="378" id="NDt-Xj-9u7"/>
+                                                <constraint firstAttribute="height" constant="350" id="hEy-mc-gqp"/>
+                                                <constraint firstAttribute="width" constant="350" id="jo6-RI-rSP"/>
                                             </constraints>
                                         </imageView>
-                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fk0-iC-7vU">
-                                            <rect key="frame" x="157" y="174" width="104" height="83"/>
-                                        </activityIndicatorView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="photoTitleLabel" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M83-Be-Fey">
-                                            <rect key="frame" x="25" y="404" width="364" height="20.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0S-DL-vp1">
+                                            <rect key="frame" x="10" y="360" width="330" height="50"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="uZp-iA-VyZ" firstAttribute="trailing" secondItem="M83-Be-Fey" secondAttribute="trailing" id="57L-fz-u89"/>
-                                        <constraint firstItem="uZp-iA-VyZ" firstAttribute="top" secondItem="u0T-in-bgV" secondAttribute="topMargin" constant="7" id="96M-Hn-Gt2"/>
-                                        <constraint firstItem="uZp-iA-VyZ" firstAttribute="leading" secondItem="u0T-in-bgV" secondAttribute="leadingMargin" constant="5" id="V9e-Gh-Src"/>
-                                        <constraint firstItem="uZp-iA-VyZ" firstAttribute="centerX" secondItem="u0T-in-bgV" secondAttribute="centerX" id="XGe-UN-OYz"/>
-                                        <constraint firstItem="uZp-iA-VyZ" firstAttribute="leading" secondItem="M83-Be-Fey" secondAttribute="leading" id="ZVs-mU-4Vo"/>
-                                        <constraint firstItem="M83-Be-Fey" firstAttribute="top" secondItem="uZp-iA-VyZ" secondAttribute="bottom" constant="8" id="kMa-P5-Fqh"/>
-                                        <constraint firstItem="uZp-iA-VyZ" firstAttribute="centerY" secondItem="fk0-iC-7vU" secondAttribute="centerY" id="mTX-xj-4fc"/>
-                                        <constraint firstItem="uZp-iA-VyZ" firstAttribute="centerX" secondItem="fk0-iC-7vU" secondAttribute="centerX" id="tXB-s2-DX6"/>
+                                        <constraint firstItem="4u5-Q6-WJv" firstAttribute="centerX" secondItem="cgc-KB-R6D" secondAttribute="centerX" id="EJq-tB-wsY"/>
+                                        <constraint firstItem="z0S-DL-vp1" firstAttribute="top" secondItem="mq8-lT-Vcc" secondAttribute="bottom" constant="10" id="RkE-y4-Yjb"/>
+                                        <constraint firstItem="mq8-lT-Vcc" firstAttribute="leading" secondItem="cgc-KB-R6D" secondAttribute="leading" id="VvQ-6Z-cfM"/>
+                                        <constraint firstAttribute="bottom" secondItem="z0S-DL-vp1" secondAttribute="bottom" constant="10" id="cDr-bX-eQp"/>
+                                        <constraint firstAttribute="trailing" secondItem="z0S-DL-vp1" secondAttribute="trailing" constant="10" id="cKZ-tY-rJF"/>
+                                        <constraint firstItem="mq8-lT-Vcc" firstAttribute="top" secondItem="cgc-KB-R6D" secondAttribute="top" id="hNv-0O-83y"/>
+                                        <constraint firstItem="4u5-Q6-WJv" firstAttribute="centerY" secondItem="cgc-KB-R6D" secondAttribute="centerY" id="mPG-iF-kdr"/>
+                                        <constraint firstItem="z0S-DL-vp1" firstAttribute="leading" secondItem="cgc-KB-R6D" secondAttribute="leading" constant="10" id="pJ0-JQ-4lh"/>
+                                        <constraint firstAttribute="trailing" secondItem="mq8-lT-Vcc" secondAttribute="trailing" id="xQx-uH-wZI"/>
                                     </constraints>
-                                </tableViewCellContentView>
+                                </collectionViewCellContentView>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="customSize" width="350" height="420"/>
                                 <connections>
-                                    <outlet property="photoImageView" destination="uZp-iA-VyZ" id="EaT-lM-ii9"/>
-                                    <outlet property="photoLoadingIndicator" destination="fk0-iC-7vU" id="5rv-mF-fj1"/>
-                                    <outlet property="titleOfPhotoLabel" destination="M83-Be-Fey" id="b27-KM-bfO"/>
+                                    <outlet property="photoActivityIndicator" destination="4u5-Q6-WJv" id="gkd-mk-TKt"/>
+                                    <outlet property="photoImage" destination="mq8-lT-Vcc" id="e3D-Xs-C6J"/>
+                                    <outlet property="titleLabel" destination="z0S-DL-vp1" id="2i9-3e-gCg"/>
                                 </connections>
-                            </tableViewCell>
-                        </prototypes>
+                            </collectionViewCell>
+                        </cells>
                         <connections>
-                            <outlet property="dataSource" destination="OFJ-I0-8Sf" id="4wh-jP-zCi"/>
-                            <outlet property="delegate" destination="OFJ-I0-8Sf" id="ayq-PJ-pr8"/>
+                            <outlet property="dataSource" destination="ra2-0Q-n3z" id="5r0-vG-i3W"/>
+                            <outlet property="delegate" destination="ra2-0Q-n3z" id="w5U-Gc-Iw7"/>
                         </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Photos" id="FEF-Ww-7AS"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fQw-t5-44d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Photo" id="0KA-1N-Qpj"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H5t-PN-g1h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3942.0289855072465" y="112.5"/>
+            <point key="canvasLocation" x="3633" y="113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sje-qc-TrH">
@@ -178,7 +191,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad9-Zb-oax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1121.7391304347827" y="112.5"/>
+            <point key="canvasLocation" x="1646" y="113"/>
         </scene>
     </scenes>
 </document>
