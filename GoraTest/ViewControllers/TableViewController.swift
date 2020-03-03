@@ -13,6 +13,9 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Clear data for back possibility
+        nameArr = []
+        
         requestName(completion: {[weak self] data in
             self?.state = .loaded(data!)
             print(nameArr)

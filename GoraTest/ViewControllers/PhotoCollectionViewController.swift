@@ -17,7 +17,11 @@ class PhotoCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //Clear data for back possibility
+        photosArr = []
+        
+        
         requestPhotos(albumId: albumId, completion: {[weak self] data in
             guard let data = data else {return}
             self?.state3 = .loaded(data)

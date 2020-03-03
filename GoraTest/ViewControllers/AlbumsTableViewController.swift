@@ -18,6 +18,9 @@ class AlbumsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Clear data for back possibility
+        albumArr = []
+
         requestAlbums(userId: userId, completion: {[weak self] data in
             self?.state2 = .loaded(data!)
             print(albumArr)
@@ -63,6 +66,7 @@ class AlbumsTableViewController: UITableViewController {
             pvc.albumId = albumArr[selectedRow].albumId
         }
     }
+
 }
     
 
